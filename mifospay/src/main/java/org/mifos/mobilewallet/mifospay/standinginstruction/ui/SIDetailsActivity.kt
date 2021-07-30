@@ -3,6 +3,7 @@ package org.mifos.mobilewallet.mifospay.standinginstruction.ui
 import android.app.DatePickerDialog
 import android.content.res.Resources
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -108,7 +109,7 @@ class SIDetailsActivity : BaseActivity(), StandingInstructionContract.SIDetailsV
         } else {
             doSave = true
             fab.hide()
-            fab.setImageDrawable(res.getDrawable(R.drawable.ic_save))
+            fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_save))
 
             tv_si_amount.visibility = View.GONE
             til_si_edit_amount.visibility = View.VISIBLE
@@ -223,7 +224,7 @@ class SIDetailsActivity : BaseActivity(), StandingInstructionContract.SIDetailsV
         inc_state_view.visibility = View.VISIBLE
 
         iv_empty_no_transaction_history
-                    .setImageDrawable(res.getDrawable(drawable))
+                    .setImageDrawable(ContextCompat.getDrawable(this, drawable))
         tv_empty_no_transaction_history_title.text = res.getString(errorTitle)
         tv_empty_no_transaction_history_subtitle.text = res.getString(errorMessage)
     }

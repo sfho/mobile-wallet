@@ -5,6 +5,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
+    kapt.includeCompileClasspath = false
+
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
